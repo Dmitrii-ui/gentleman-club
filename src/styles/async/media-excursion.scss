@@ -1,0 +1,57 @@
+@media (max-width: 990px) {
+	.information {
+		.excursion {
+			flex-basis: 50%;
+			background-position: top center;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.information {
+		flex-direction: column;
+
+		.excursion {
+			order: 1;
+			background-image: none;
+		}
+
+		.about {
+			background-image: url('../../img/about.webp');
+			background-position: left -200px top;
+			background-size: cover;
+			background-repeat: no-repeat;
+			order: 0;
+			
+			&__menu {
+				margin-bottom: 50px;
+			}
+		}
+	}
+}
+
+@media (max-width: 460px) {
+	.information {
+		.excursion {
+			&__text {
+				font-size: 20px;
+			}
+		}
+
+		.about {
+
+			&__menu {
+				padding-left: 10px;
+			}
+
+			&__item {
+				font-size: 16px;
+				padding-left: 25px;
+				
+				&::before {
+					top: 1px;
+				}
+			}
+		}
+	}
+}

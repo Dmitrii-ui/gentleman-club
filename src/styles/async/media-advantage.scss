@@ -1,0 +1,128 @@
+@media (max-width: 1000px) {
+	.content {
+
+		.advantage {
+
+			&__title {
+				max-width: 225px;
+			}
+		}
+	}
+}
+
+@media (max-width: 880px) {
+	.content {
+
+		.advantage {
+
+			&__title {
+				max-width: 225px;		
+			}
+
+			.advantage__title--small {
+				max-width: 150px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.content {
+		.advantage {
+			background-image: url("../../img/advantage-bcg2-small.webp"), url("../../img/advantage-bcg-small.png"); 
+			background-position: center 145px, top 10px center;
+			background-size: auto, auto;
+
+			&__column {
+				display: none;
+			}
+		}
+	}
+
+	.slider {
+		display: block;
+		padding-bottom: 100px;
+		padding-top: 35px;
+		position: relative;
+		
+
+		&__content {
+			width: 250px;
+			height: 250px;
+		}
+
+		&__item {
+			position: absolute;
+			top: 35%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			opacity: 0;
+			transition-duration: .3s;
+			width: 250px;
+			height: 250px;
+
+			&.active {
+				opacity: 1;
+			}
+		}
+
+		&__buttons {
+			display: flex;
+			justify-content: center;
+			margin-top: 30px;
+		}
+
+		&__btn {
+			border-radius: 50%;
+			display: inline-block;
+			border: none;
+			width: 10px;
+			height: 10px;
+			background-color: #fff;
+			margin-right: 10px;
+			cursor: pointer;
+			outline: none;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&.active {
+				background-image: linear-gradient(180deg, #B29457 0%, #FBF7C8 100%);
+			}
+		}
+
+		&__action {
+			position: absolute;
+			top: 30%;
+			width: 60px;
+			height: 60px;
+			background-color: transparent;
+			outline: none;
+			border: none;
+			cursor: pointer;
+			background-image: url('../../img/next.png');
+			background-position: top left;
+			background-size: contain;
+
+			&:last-child {
+				right: 0;
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+@media (max-width: 340px) {
+	.content {
+		.advantage {
+			.slider {
+				&__action {
+					&:last-child {
+						right: 20px;
+					}
+				}
+			}
+		}
+	}
+}

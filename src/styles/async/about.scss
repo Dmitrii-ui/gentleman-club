@@ -1,0 +1,39 @@
+.about {
+	flex-basis: 42%;
+	flex-grow: 1;
+	flex-shrink: 1;
+
+
+	.about__text {
+		margin-bottom: 90px;
+	}
+
+	&__menu {
+		padding-left: 8%;
+	}
+
+	&__item {
+		font-size: calc(125% + (20 - 15) * (100vw - 320px) / (1920 - 320));
+		margin-bottom: 5%;
+		padding-left: 30px;
+		position: relative;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&::before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			background-image: url('../../img/circle-wrapper.svg'), url('../../img/circle.svg');
+			background-repeat: no-repeat;
+			background-size: auto;
+			background-position: top left, top 4px center;
+			top: 4px;
+			left: 0;
+			width: 18px;
+			height: 18px;
+		}
+	}
+}

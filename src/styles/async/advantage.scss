@@ -1,0 +1,122 @@
+.content {
+	background-color: #00181A;
+}
+
+.gradient {
+	background-image: linear-gradient(#b29457, #fbf7c8);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.block-one {
+	background-image: url("../../img/advantage-bcg.png");  
+  background-position: top center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.block {
+	background-image: url("../../img/advantage-bcg2.webp"), url("../../img/advantage-bcg.png");  
+  background-position: center 245px, top 10px center;
+	background-repeat: no-repeat;
+	background-size: auto, auto;
+
+	&__header {
+		font-family: 'Alice', sans-serif;
+		font-size: calc(225% + (70 - 36) * (100vw - 320px) / (1920 - 320));
+		text-align: center;
+		position: relative;
+		padding-bottom: 25px;
+		margin-bottom: 15px;
+
+		&::before {
+			content: "";
+			width: 179px;
+			height: 14px;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 0;
+			background-image: url('../../img/line.png');
+		}
+	}
+
+	&__text {
+		text-transform: uppercase;
+		font-family: 'Alice', sans-serif;
+		font-size: calc(100% + (24 - 16) * (100vw - 320px) / (1920 - 320));
+		text-align: center;
+		margin: 0;
+	}
+}
+
+.advantage {
+	box-shadow: 0 -30px 25px 25px#00181A;
+
+
+	&__body {
+		padding-top: 8%;
+	}
+
+	&__header {
+		margin: 0;
+		
+	}
+
+	&__text {
+		margin-top: 10px;
+	}
+
+	&__column {
+		display: flex;
+		padding-bottom: 2.8%;
+		width: 100%;
+		justify-content: space-between;
+		margin: 0 auto;
+
+		&--second {
+			max-width: 85%;
+		}
+
+		&:last-child {
+			max-width: 55%;
+			padding-bottom: 11.5%;
+		}
+	}
+
+	&__item {
+		text-align: center;
+	}
+
+	&__img {
+		position: relative;
+		width: 120px;
+		height: 138px;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	&__svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	&__title {
+		text-align: center;
+		text-transform: uppercase;
+		word-wrap: break-word;
+		font-size: calc(125% + (20 - 18) * (100vw - 320px) / (1920 - 320));
+		max-width: 325px;
+		margin: 0 auto;
+		margin-top: 15px;
+		background-image: linear-gradient(#b29457, #fbf7c8);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	&__slider {
+		display: none;
+	}
+}
